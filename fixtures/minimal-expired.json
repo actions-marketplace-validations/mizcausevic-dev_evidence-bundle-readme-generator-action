@@ -1,0 +1,11 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "old-incident-pack",
+    "subject": "Stale Incident Response Pack",
+    "purpose": "incident-response",
+    "creator": "ops@example.com",
+    "expires_at": "2025-01-01T00:00:00Z"
+  },
+  "items": []
+}

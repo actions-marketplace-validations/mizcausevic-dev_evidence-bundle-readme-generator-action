@@ -1,0 +1,70 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "audit-2026-q2-vendor-risk",
+    "subject": "Q2 2026 Vendor Risk Audit Evidence Pack",
+    "purpose": "audit-evidence",
+    "created_at": "2026-05-20T00:00:00Z",
+    "creator": "compliance-platform@example.com",
+    "expires_at": "2027-05-20T00:00:00Z",
+    "labels": {
+      "audit-cycle": "2026-Q2",
+      "scope": "vendor-risk",
+      "sensitivity": "internal"
+    }
+  },
+  "items": [
+    {
+      "id": "vendor-soc2-report-2026",
+      "path": "content/vendor-soc2-report-2026.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:a1b2c3d4e5f60718293a4b5c6d7e8f9001112233445566778899aabbccddeeff",
+      "size_bytes": 1457820,
+      "source_uri": "https://drive.example.com/files/soc2-2026.pdf",
+      "retrieved_at": "2026-05-19T18:00:00Z",
+      "description": "Vendor SOC 2 Type II report covering 2025-04-01 to 2026-03-31."
+    },
+    {
+      "id": "risk-questionnaire-response",
+      "path": "content/risk-questionnaire-response.json",
+      "media_type": "application/json",
+      "sha256": "sha256:b2c3d4e5f60718293a4b5c6d7e8f900111223344556677889900aabbccddeeff",
+      "size_bytes": 28644,
+      "description": "Vendor response to standard risk questionnaire v3.2."
+    },
+    {
+      "id": "compliance-attestation-letter",
+      "path": "content/compliance-attestation-letter.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:c3d4e5f60718293a4b5c6d7e8f900111223344556677889900112233aabbccdd",
+      "size_bytes": 184522
+    }
+  ],
+  "relationships": [
+    {
+      "subject": "compliance-attestation-letter",
+      "predicate": "cites",
+      "object": "vendor-soc2-report-2026",
+      "note": "Letter cites SOC 2 controls from the 2026 report."
+    },
+    {
+      "subject": "risk-questionnaire-response",
+      "predicate": "supersedes",
+      "object": "risk-questionnaire-response-q1-2026",
+      "note": "Replaces the Q1 response with updated controls."
+    }
+  ],
+  "provenance": {
+    "agent_card_uri": "https://example.com/agents/compliance-collector.json",
+    "tool_card_uri": "https://example.com/tools/drive-fetcher.json",
+    "otel_trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+    "model": "claude-sonnet-4-20251001",
+    "retrieval_query": "vendor SOC2 attestation 2026"
+  },
+  "signature": {
+    "algorithm": "ed25519",
+    "signer": "compliance-platform@example.com",
+    "value": "AAAA1111BBBB2222CCCC3333DDDD4444EEEE5555FFFF6666AAAA7777BBBB8888",
+    "signed_at": "2026-05-20T00:05:00Z"
+  }
+}
