@@ -1,5 +1,5 @@
 name: "Evidence Bundle README Generator"
-description: "Renders a human-readable Markdown README from an evidence-bundle manifest JSON via evidence-bundle-readme-generator. Posts as PR comment AND/OR writes to a target file path."
+description: "Render a Markdown README from an evidence-bundle manifest. Post as PR comment or commit to a target path."
 author: "mizcausevic-dev"
 branding:
   icon: "book-open"
